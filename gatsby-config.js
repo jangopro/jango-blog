@@ -1,27 +1,35 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
-    desc: 'My blog'
+    title: "Gatsby Default Starter",
+    desc: "A new blog"
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'img',
+        name: "src",
+        path: `${__dirname}/src/`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "img",
         path: `${__dirname}/src/images`
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-transformer-remark",
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`
+        excerpt_separator: `<!-- end -->`
       }
     },
-    'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
-  ],
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-netlify-cms"
+  ]
 };
+
+// pathPrefix: "/levelupgatsby",
