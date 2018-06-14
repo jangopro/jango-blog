@@ -1,17 +1,22 @@
-import React from "react";
-import Link from "gatsby-link";
-import PostListing from "../components/Posts/PostListing";
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import PostListing from '../components/Posts/PostListing';
 
 const IndexPage = ({ data }) => (
-  <div>
-    <h2>Posts</h2>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <PostListing key={node.id} post={node} />
-    ))}
-  </div>
+    <div>
+        <h2>Posts</h2>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+            <PostListing key={node.id} post={node} />
+        ))}
+    </div>
 );
 
 export default IndexPage;
+
+IndexPage.propTypes = {
+    data: PropTypes.optionalObject
+};
 
 export const query = graphql`
   query SiteMeta {
