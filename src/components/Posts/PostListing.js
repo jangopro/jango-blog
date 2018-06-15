@@ -1,22 +1,17 @@
 import React from 'react';
-import Link from 'gatsby-link';
+
 import PropTypes from 'prop-types';
+import BlogPostHome from '../../blocks/BlogPostHome';
 
-import styled from 'styled-components';
-
-const PostArticle = styled.article`
-  width: 33%;
-  float: left;
-`;
 
 const PostListing = ({ post }) => (
-    <PostArticle>
+    <BlogPostHome>
         <h3>
-            <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+            <BlogPostHome.Link href={post.fields.slug}>{post.frontmatter.title}</BlogPostHome.Link>
         </h3>
         <span>{post.frontmatter.date}</span>
-        <p>{post.excerpt}</p>
-    </PostArticle>
+        <BlogPostHome.Excerpt>{post.excerpt}</BlogPostHome.Excerpt>
+    </BlogPostHome>
 );
 
 export default PostListing;
