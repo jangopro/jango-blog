@@ -2,14 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PostListing from '../components/Posts/PostListing';
+import HomeSection from '../blocks/HomeSections';
+
+const gridArticles = {
+    display: 'inline-grid',
+    'grid-template-columns': 'auto auto auto',
+    'grid-column-gap': '20px'
+};
 
 const IndexPage = ({ data }) => (
-    <div>
-        <h2>Latest articles</h2>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-            <PostListing key={node.id} post={node} />
-        ))}
-    </div>
+    <main>
+        <HomeSection>
+            <HomeSection.Title>Latest articles</HomeSection.Title>
+            <div style={gridArticles}>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <PostListing key={node.id} post={node} />
+                ))}
+            </div>
+        </HomeSection>
+        <HomeSection>
+            <HomeSection.Title>Projects</HomeSection.Title>
+            <div style={gridArticles}>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <PostListing key={node.id} post={node} />
+                ))}
+            </div>
+        </HomeSection>
+    </main>
+
+    
 );
 
 export default IndexPage;

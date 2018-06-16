@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Excerpt = styled.p`
-    color: red;
+    color: black;
 `;
 
 export default Excerpt;

@@ -8,7 +8,6 @@ import logo from '../../images/logo.svg';
 
 const HeaderWrapper = styled.div`
   background: #524763;
-  margin-bottom: 1.45rem;
   overflow: hidden;
   position: relative;
   h1 {

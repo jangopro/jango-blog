@@ -9,7 +9,7 @@ const PostListing = ({ post }) => (
         <h3>
             <BlogPostHome.Link href={post.fields.slug}>{post.frontmatter.title}</BlogPostHome.Link>
         </h3>
-        <span>{post.frontmatter.date}</span>
+        <BlogPostHome.Subtitle>{post.frontmatter.date}</BlogPostHome.Subtitle>
         <BlogPostHome.Excerpt>{post.excerpt}</BlogPostHome.Excerpt>
     </BlogPostHome>
 );

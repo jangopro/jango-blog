@@ -1,14 +1,15 @@
 import Excerpt from './Excerpt';
 import styled from 'styled-components';
 import Link from './Link';
+import Subtitle from './Subtitle';
 
 
 const BlogPostHome = styled.article`
-    width: 33%;
-    float: left;
+
 `;
 
 BlogPostHome.Link = Link;
 BlogPostHome.Excerpt = Excerpt;
+BlogPostHome.Subtitle = Subtitle;
 
 export default BlogPostHome;
