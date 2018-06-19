@@ -19,7 +19,7 @@ export default class PostPage extends Component {
 }
 
 PostPage.propTypes = {
-    data: PropTypes.optionalObject
+    data: PropTypes.object
 };
 
 export const query = graphql`

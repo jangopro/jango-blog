@@ -17,7 +17,7 @@ const PostListing = ({ post }) => (
 export default PostListing;
 
 PostListing.propTypes = {
-    post: PropTypes.optionalObject
+    post: PropTypes.object
 };
 
 

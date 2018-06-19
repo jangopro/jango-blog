@@ -27,7 +27,7 @@ const TemplateWrapper = ({ children, data }) => (
 
 TemplateWrapper.propTypes = {
     children: PropTypes.func,
-    data: PropTypes.optionalObject
+    data: PropTypes.object
 };
 
 export default TemplateWrapper;

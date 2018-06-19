@@ -91,5 +91,5 @@ export default class Header extends Component {
 }
 
 Header.propTypes = {
-    data: PropTypes.optionalObject
+    data: PropTypes.object
 };
