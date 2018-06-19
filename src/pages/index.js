@@ -6,13 +6,19 @@ import HomeSection from '../blocks/HomeSections';
 
 const gridArticles = {
     display: 'inline-grid',
-    'grid-template-columns': 'auto auto auto',
-    'grid-column-gap': '20px'
+    gridTemplateColumns: 'auto auto auto',
+    gridColumnGap: '20px'
+};
+
+const gridProjects = {
+    display: 'inline-grid',
+    gridTemplateColumns: 'auto auto auto',
+    gridColumnGap: '20px'
 };
 
 const IndexPage = ({ data }) => (
     <main>
-        <HomeSection>
+        <HomeSection bgColor='white'>
             <HomeSection.Title>Latest articles</HomeSection.Title>
             <div style={gridArticles}>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -20,9 +26,9 @@ const IndexPage = ({ data }) => (
                 ))}
             </div>
         </HomeSection>
-        <HomeSection>
+        <HomeSection bgColor='yellow'>
             <HomeSection.Title>Projects</HomeSection.Title>
-            <div style={gridArticles}>
+            <div style={gridProjects}>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <PostListing key={node.id} post={node} />
                 ))}
@@ -36,7 +42,7 @@ const IndexPage = ({ data }) => (
 export default IndexPage;
 
 IndexPage.propTypes = {
-    data: PropTypes.optionalObject
+    data: PropTypes.object
 };
 
 export const query = graphql`
