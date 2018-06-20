@@ -34,8 +34,14 @@ const IndexPage = ({ data }) => (
                 ))}
             </div>
         </HomeSection>
+        <HomeSection bgColor='red'>
+            <HomeSection.Title>Subscribe!</HomeSection.Title>
+            <form action="">
+                <input type="email" name="" id=""/>
+                <button type="submit">Subscribe!</button>
+            </form>
+        </HomeSection>
     </main>
-
     
 );
 
