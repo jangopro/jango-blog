@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Post = styled.article`
+    text-align: center;
+    margin: 0 auto;
+    width: 900px;
+`;
+
+const PostText = styled.article`
+    text-align: justify;
+`;
 
 export default class PostPage extends Component {
     render() {
         const { data } = this.props;
         return (
-            <div>
-                <span>{data.markdownRemark.frontmatter.date}</span>
+            <Post>
                 <h1>{data.markdownRemark.frontmatter.title}</h1>
-                <div
+                <span>{data.markdownRemark.frontmatter.date}</span>
+                <PostText
                     dangerouslySetInnerHTML={{
                         __html: data.markdownRemark.html
                     }}
                 />
-            </div>
+            </Post>
         );
     }
 }

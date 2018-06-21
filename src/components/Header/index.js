@@ -71,6 +71,9 @@ export default class Header extends Component {
                             <li>
                                 <Link to="/about">About</Link>
                             </li>
+                            <li>
+                                <Link to="/articles">Articles</Link>
+                            </li>
                         </ul>
                     </MainNav>
                 </HeaderContainer>

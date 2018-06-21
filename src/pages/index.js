@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
                 ))}
             </div>
         </HomeSection>
-        <HomeSection bgColor='yellow'>
+        <HomeSection bgColor='green'>
             <HomeSection.Title>Projects</HomeSection.Title>
             <div style={gridProjects}>
                 {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -59,7 +59,10 @@ export const query = graphql`
         desc
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 3
+    ) {
       edges {
         node {
           id
