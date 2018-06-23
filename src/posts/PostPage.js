@@ -18,7 +18,7 @@ export default class PostPage extends Component {
         return (
             <Post>
                 <h1>{data.markdownRemark.frontmatter.title}</h1>
-                <span>{data.markdownRemark.frontmatter.date}</span>
+                <span>{data.markdownRemark.frontmatter.date} | {data.markdownRemark.timeToRead} min read</span>
                 <PostText
                     dangerouslySetInnerHTML={{
                         __html: data.markdownRemark.html
@@ -37,6 +37,7 @@ export const query = graphql`
   query BlogPostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD YYYY")

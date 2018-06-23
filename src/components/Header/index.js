@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import logo from '../../images/logo.svg';
 
 const HeaderWrapper = styled.div`
-  background: #524763;
+  background: rgba(205, 198, 174, 1);
   overflow: hidden;
   position: relative;
   h1 {

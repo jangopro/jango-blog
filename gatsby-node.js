@@ -1,18 +1,19 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-    const { createNodeField } = boundActionCreators;
+exports.onCreateNode =({ node, getNode, boundActionCreators }) => {
     if (node.internal.type === 'MarkdownRemark') {
+        const { createNodeField } = boundActionCreators;
         const slug = createFilePath({
             node,
             getNode,
-            basePath: 'posts'
+            basePath: getNode(node.parent).sourceInstanceName
         });
+        node.collection = getNode(node.parent).sourceInstanceName;
         createNodeField({
             node,
             name: 'slug',
-            value: `/posts${slug}`
+            value: slug
         });
     }
 };

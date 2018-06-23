@@ -9,8 +9,8 @@ module.exports = {
         {
             resolve: 'gatsby-source-filesystem',
             options: {
-                name: 'src',
-                path: `${__dirname}/src/`
+                name: 'posts',
+                path: `${__dirname}/src/posts`
             }
         },
         {
@@ -18,6 +18,13 @@ module.exports = {
             options: {
                 name: 'img',
                 path: `${__dirname}/src/images`
+            }
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'projects',
+                path: `${__dirname}/src/projects`
             }
         },
         {
@@ -32,5 +39,3 @@ module.exports = {
         'gatsby-plugin-eslint'
     ]
 };
-
-// pathPrefix: "/levelupgatsby",

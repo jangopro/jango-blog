@@ -6,7 +6,7 @@ import HomeSection from '../blocks/HomeSections';
 
 const gridArticles = {
     display: 'inline-grid',
-    gridTemplateColumns: 'auto auto auto',
+    gridTemplateColumns: '30% 30% 30%',
     gridColumnGap: '20px'
 };
 
@@ -18,23 +18,26 @@ const gridProjects = {
 
 const IndexPage = ({ data }) => (
     <main>
-        <HomeSection bgColor='white'>
+        <HomeSection bgColor='rgba(37, 137, 189, 1)'>
             <HomeSection.Title>Latest articles</HomeSection.Title>
             <div style={gridArticles}>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
+                {data.posts.edges.map(({ node }) => (
                     <PostListing key={node.id} post={node} />
                 ))}
             </div>
         </HomeSection>
-        <HomeSection bgColor='green'>
+        <HomeSection bgColor='rgba(205, 198, 174, 1)'>
             <HomeSection.Title>Projects</HomeSection.Title>
             <div style={gridProjects}>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <PostListing key={node.id} post={node} />
-                ))}
+                <div style={gridArticles}>
+                    {data.projects.edges.map(({ node }) => (
+                        <PostListing key={node.id} post={node} />
+                    ))}
+                </div>
+
             </div>
         </HomeSection>
-        <HomeSection bgColor='red'>
+        <HomeSection bgColor='rgba(254, 74, 73, 1)'>
             <HomeSection.Title>Subscribe!</HomeSection.Title>
             <form action="">
                 <input type="email" name="" id=""/>
@@ -59,13 +62,36 @@ export const query = graphql`
         desc
       }
     }
-    allMarkdownRemark(
+    posts: allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
+        filter: { collection: { eq: "posts" } }
         limit: 3
     ) {
       edges {
         node {
           id
+          timeToRead
+          frontmatter {
+            title
+            date(formatString: "MMMM DD YYYY")
+          }
+          fields {
+            slug
+          }
+          html
+          excerpt
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { collection: { eq: "projects" } }
+        limit: 3
+    ) {
+      edges {
+        node {
+          id
+          timeToRead
           frontmatter {
             title
             date(formatString: "MMMM DD YYYY")
