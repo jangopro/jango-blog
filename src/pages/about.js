@@ -1,10 +1,35 @@
 import React, { Component } from 'react';
 
+import myPhoto from '../images/me.jpg';
+import styled from 'styled-components';
+
+import {
+    FaGithub,
+    FaTwitter,
+    FaSpotify,
+    FaLinkedin
+} from 'react-icons/lib/fa';
+
+const AboutSection = styled.section`
+    img {
+        float: left
+    }
+    p {
+        width: 50%;
+        float: left;
+    }
+`;
+
 export default class About extends Component {
     render() {
         return (
-            <div>
-                <h1>About Us</h1>
+            <AboutSection>
+                <h1>About Me</h1>
+                <img src={myPhoto} width='200px' />
+                <FaGithub />
+                <FaTwitter />
+                <FaSpotify />
+                <FaLinkedin />
                 <p>
           Beard roof party cardigan locavore you probably haven&apos;t heard of them
           squid artisan edison bulb whatever normcore jianbing succulents.
@@ -17,7 +42,7 @@ export default class About extends Component {
           four loko drinking vinegar tofu. YOLO pinterest try-hard pok pok echo
           park tacos.
                 </p>
-            </div>
+            </AboutSection>
         );
     }
 }
