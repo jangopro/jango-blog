@@ -6,6 +6,7 @@ const Post = styled.article`
     text-align: center;
     margin: 0 auto;
     width: 900px;
+    padding: 30px 0px;
 `;
 
 const PostText = styled.article`
