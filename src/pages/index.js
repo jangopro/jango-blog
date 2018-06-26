@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PostListing from '../components/Posts/PostListing';
+import ProjectListing from '../components/Projects/ProjectListing';
 import HomeSection from '../blocks/HomeSections';
 
 const gridArticles = {
@@ -16,6 +17,7 @@ const gridProjects = {
     gridColumnGap: '20px'
 };
 
+
 const IndexPage = ({ data }) => (
     <main>
         <HomeSection bgColor='rgba(37, 137, 189, 1)'>
@@ -29,12 +31,9 @@ const IndexPage = ({ data }) => (
         <HomeSection bgColor='rgba(205, 198, 174, 1)'>
             <HomeSection.Title>Projects</HomeSection.Title>
             <div style={gridProjects}>
-                <div style={gridArticles}>
-                    {data.projects.edges.map(({ node }) => (
-                        <PostListing key={node.id} post={node} />
-                    ))}
-                </div>
-
+                {data.projects.edges.map(({ node }) => (
+                    <ProjectListing key={node.id} project={node} />
+                ))}
             </div>
         </HomeSection>
         <HomeSection bgColor='rgba(254, 74, 73, 1)'>
