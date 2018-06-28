@@ -5,8 +5,11 @@ import styled from 'styled-components';
 const Post = styled.article`
     text-align: center;
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
     padding: 30px 0px;
+    span{
+        padding-bottom: 20px;
+    }
 `;
 
 const PostText = styled.article`
@@ -18,8 +21,8 @@ export default class PostPage extends Component {
         const { data } = this.props;
         return (
             <Post>
-                <h1>{data.markdownRemark.frontmatter.title}</h1>
-                <span>{data.markdownRemark.frontmatter.date} | {data.markdownRemark.timeToRead} min read</span>
+                <h2>{data.markdownRemark.frontmatter.title}</h2>
+                <h3>{data.markdownRemark.frontmatter.date} | {data.markdownRemark.timeToRead} min read</h3>
                 <PostText
                     dangerouslySetInnerHTML={{
                         __html: data.markdownRemark.html

@@ -1,19 +1,25 @@
 import React from 'react';
+import myPhoto from '../../images/placeholder.jpg';
 
 import PropTypes from 'prop-types';
-import BlogPostHome from '../../blocks/BlogPostHome';
+import ProjectHomeSection from '../../blocks/ProjectHomeSections';
 
 
-const PostListing = ({ project }) => (
-    <BlogPostHome>
-        <h3>{project.frontmatter.title}</h3>
-        <BlogPostHome.Excerpt>{project.excerpt}</BlogPostHome.Excerpt>
-    </BlogPostHome>
+const ProjectListing = ({ project }) => (
+    <ProjectHomeSection>
+        <div>
+            <img src={myPhoto} style={{width: 300}} alt=""/>
+        </div>
+        <div>
+            <h3>{project.frontmatter.title}</h3>
+            <ProjectHomeSection.Excerpt>{project.excerpt}</ProjectHomeSection.Excerpt>
+        </div>
+    </ProjectHomeSection>
 );
 
-export default PostListing;
+export default ProjectListing;
 
-PostListing.propTypes = {
+ProjectListing.propTypes = {
     project: PropTypes.object
 };
 

@@ -1,6 +1,7 @@
 ---
 title: 'Second Post'
 date: '2018-05-31'
+image: '../images/placeholder.jpg'
 ---
 
 Tempor irure qui tempor ad fugiat ullamco non do laboris nisi sint. Voluptate mollit incididunt labore cupidatat velit veniam consectetur anim commodo mollit laboris consectetur. Deserunt laboris do ut et. Esse id esse magna cillum reprehenderit tempor deserunt aliqua Lorem. Eu sit duis ad ad laboris elit in adipisicing. Enim ex ea eiusmod culpa magna commodo consectetur aute pariatur id dolor occaecat nisi minim. Nostrud adipisicing ut commodo id ullamco.

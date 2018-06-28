@@ -7,7 +7,7 @@ const customBgColor = props => props.bgColor || 'red';
 const HomeSection = styled.section.attrs({
     
 })`
-    padding: 20px;
+    padding: 30px 50px;
     background-color: ${customBgColor};
 `;
 

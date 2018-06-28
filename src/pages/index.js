@@ -7,20 +7,19 @@ import HomeSection from '../blocks/HomeSections';
 
 const gridArticles = {
     display: 'inline-grid',
-    gridTemplateColumns: '30% 30% 30%',
-    gridColumnGap: '20px'
+    gridTemplateColumns: '1fr 1fr 1fr',
+    gridColumnGap: '20px',
 };
 
 const gridProjects = {
     display: 'inline-grid',
-    gridTemplateColumns: 'auto auto auto',
-    gridColumnGap: '20px'
+    gridTemplateColumns: '1fr 1fr',
+    gridColumnGap: '40px'
 };
-
 
 const IndexPage = ({ data }) => (
     <main>
-        <HomeSection bgColor='rgba(37, 137, 189, 1)'>
+        <HomeSection bgColor='white'>
             <HomeSection.Title>Latest articles</HomeSection.Title>
             <div style={gridArticles}>
                 {data.posts.edges.map(({ node }) => (
@@ -28,20 +27,13 @@ const IndexPage = ({ data }) => (
                 ))}
             </div>
         </HomeSection>
-        <HomeSection bgColor='rgba(205, 198, 174, 1)'>
-            <HomeSection.Title>Projects</HomeSection.Title>
+        <HomeSection bgColor='#272833'>
+            <HomeSection.Title style={{color: '#fff'}}>Projects</HomeSection.Title>
             <div style={gridProjects}>
                 {data.projects.edges.map(({ node }) => (
                     <ProjectListing key={node.id} project={node} />
                 ))}
             </div>
-        </HomeSection>
-        <HomeSection bgColor='rgba(254, 74, 73, 1)'>
-            <HomeSection.Title>Subscribe!</HomeSection.Title>
-            <form action="">
-                <input type="email" name="" id=""/>
-                <button type="submit">Subscribe!</button>
-            </form>
         </HomeSection>
     </main>
     
@@ -90,7 +82,6 @@ export const query = graphql`
       edges {
         node {
           id
-          timeToRead
           frontmatter {
             title
             date(formatString: "MMMM DD YYYY")

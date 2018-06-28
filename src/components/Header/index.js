@@ -4,12 +4,15 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-import logo from '../../images/logo.svg';
+import {
+    FaGithub
+} from 'react-icons/lib/fa';
 
 const HeaderWrapper = styled.div`
-  background: rgba(205, 198, 174, 1);
+  background: #272833;
   overflow: hidden;
   position: relative;
+  color: #FFF;
   h1 {
     img {
       height: 80px;
@@ -52,7 +55,7 @@ export default class Header extends Component {
         return (
             <HeaderWrapper ref={wrapper => (this.wrapper = wrapper)}>
                 <HeaderContainer>
-                    <h1 style={{ margin: 0 }}>
+                    <h1>
                         <Link
                             to="/"
                             style={{
@@ -60,8 +63,9 @@ export default class Header extends Component {
                                 textDecoration: 'none'
                             }}
                         >
-                            <img src={logo} alt="Level Up Logo" />
+                            <FaGithub />
                         </Link>
+                        Michael Provencher
                     </h1>
                     <MainNav>
                         <ul>
