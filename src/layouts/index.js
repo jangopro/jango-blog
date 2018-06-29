@@ -16,13 +16,13 @@ const TemplateWrapper = ({ children, data }) => (
             ]}
         />
         <Header data={data} />
-        <div
+        <main
             style={{
                 margin: '0 auto'
             }}
         >
             {children()}
-        </div>
+        </main>
         <Footer />
     </div>
 );

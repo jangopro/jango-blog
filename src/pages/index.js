@@ -18,7 +18,7 @@ const gridProjects = {
 };
 
 const IndexPage = ({ data }) => (
-    <main>
+    <div>
         <HomeSection bgColor='white'>
             <HomeSection.Title>Latest articles</HomeSection.Title>
             <div style={gridArticles}>
@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => (
                 ))}
             </div>
         </HomeSection>
-    </main>
+    </div>
     
 );
 

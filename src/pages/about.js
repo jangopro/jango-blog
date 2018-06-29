@@ -13,17 +13,22 @@ import MainContainer from '../blocks/Main';
 
 const DivAbout = styled.div`
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 1fr;
     grid-gap: 20px;
     p {
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+    img{
+        margin-bottom: 10px;
     }
 `;
 
 const DivIcons = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    svg{
+        margin-right: 10px;
+    }
 `;
 
 export default class About extends Component {
@@ -32,7 +37,16 @@ export default class About extends Component {
             <MainContainer>
                 <h1>About Me</h1>
                 <DivAbout>
-                    <img src={myPhoto} width='200px' />
+                    <div>
+                        <img src={myPhoto} width='200px' />
+                        <DivIcons>
+                            <FaGithub />
+                            <FaTwitter />
+                            <FaSpotify />
+                            <FaLinkedin />
+                        </DivIcons>
+                    </div>
+                   
                     <p>
             Beard roof party cardigan locavore you probably haven&apos;t heard of them
             squid artisan edison bulb whatever normcore jianbing succulents.
@@ -45,12 +59,6 @@ export default class About extends Component {
             four loko drinking vinegar tofu. YOLO pinterest try-hard pok pok echo
             park tacos.
                     </p>
-                    <DivIcons>
-                        <FaGithub />
-                        <FaTwitter />
-                        <FaSpotify />
-                        <FaLinkedin />
-                    </DivIcons>
                 </DivAbout>
                 
             </MainContainer>
