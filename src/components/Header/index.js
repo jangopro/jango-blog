@@ -4,20 +4,18 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-import {
-    FaGithub
-} from 'react-icons/lib/fa';
-
 const HeaderWrapper = styled.div`
-  background: #272833;
-  overflow: hidden;
-  position: relative;
-  color: #FFF;
-  h1 {
-    img {
-      height: 80px;
+    background: #272833;
+    overflow: hidden;
+    position: relative;
+    color: #FFF;
+
+    h1 {
+        font-size: 24px;
+        svg {
+            margin-right: 10px;
+        }
     }
-  }
 `;
 
 const HeaderContainer = styled.div`
@@ -63,9 +61,8 @@ export default class Header extends Component {
                                 textDecoration: 'none'
                             }}
                         >
-                            <FaGithub />
+                            Michael Provencher
                         </Link>
-                        Michael Provencher
                     </h1>
                     <MainNav>
                         <ul>

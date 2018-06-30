@@ -7,14 +7,14 @@ import HomeSection from '../blocks/HomeSections';
 
 const gridArticles = {
     display: 'inline-grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
     gridColumnGap: '20px',
 };
 
 const gridProjects = {
     display: 'inline-grid',
-    gridTemplateColumns: '1fr 1fr',
-    gridColumnGap: '40px'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gridColumnGap: '60px'
 };
 
 const IndexPage = ({ data }) => (

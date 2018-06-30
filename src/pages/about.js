@@ -3,13 +3,8 @@ import React, { Component } from 'react';
 import myPhoto from '../images/me.jpg';
 import styled from 'styled-components';
 
-import {
-    FaGithub,
-    FaTwitter,
-    FaSpotify,
-    FaLinkedin
-} from 'react-icons/lib/fa';
 import MainContainer from '../blocks/Main';
+import ListIcons from '../components/ListIcons/ListIcons';
 
 const DivAbout = styled.div`
     display: grid;
@@ -24,13 +19,6 @@ const DivAbout = styled.div`
     }
 `;
 
-const DivIcons = styled.div`
-    text-align: center;
-    svg{
-        margin-right: 10px;
-    }
-`;
-
 export default class About extends Component {
     render() {
         return (
@@ -39,12 +27,7 @@ export default class About extends Component {
                 <DivAbout>
                     <div>
                         <img src={myPhoto} width='200px' />
-                        <DivIcons>
-                            <FaGithub />
-                            <FaTwitter />
-                            <FaSpotify />
-                            <FaLinkedin />
-                        </DivIcons>
+                        <ListIcons style={{textAlign: 'center'}} />
                     </div>
                    
                     <p>
