@@ -29,19 +29,16 @@ export default class About extends Component {
                         <img src={myPhoto} width='200px' />
                         <ListIcons style={{textAlign: 'center'}} />
                     </div>
-                   
-                    <p>
-            Beard roof party cardigan locavore you probably haven&apos;t heard of them
-            squid artisan edison bulb whatever normcore jianbing succulents.
-            Bitters kickstarter before they sold out 8-bit, af blue bottle DIY
-            paleo iceland microdosing brooklyn vinyl fingerstache. Gentrify
-            adaptogen raw denim heirloom. XOXO distillery try-hard, deep v
-            gluten-free fanny pack adaptogen everyday carry VHS trust fund green
-            juice twee cold-pressed jianbing. Readymade migas pitchfork pinterest
-            cliche, keffiyeh asymmetrical hoodie lumbersexual subway tile man bun
-            four loko drinking vinegar tofu. YOLO pinterest try-hard pok pok echo
-            park tacos.
-                    </p>
+                    <div>
+                        <p>
+                            Je suis un développeur Web de Québec, présentement en emploi chez Myca en tant que développeur front-end. 
+                            Je développe principaelement en JavaScript, quoiqu&apos;en début de carrière, j&apos;étais plus du côté back-end em utilisant PHP et des CMS (Wordpress, Drupal)
+                        </p>
+                        <p>
+                            Dans mes temps libres, j’aime bien jouer de la guitare/ basse et essayer de bien parler allemand,  Je suis un grand fan de cinéma, de musique et de lecture.
+                        </p>
+                    </div>
+                    
                 </DivAbout>
                 
             </MainContainer>

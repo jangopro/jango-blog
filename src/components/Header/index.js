@@ -33,14 +33,14 @@ const MainNav = styled.nav`
     list-style: none;
     display: flex;
     li {
-      margin-left: 10px;
+      margin-left: 20px;
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
       a {
         text-decoration: none;
         color: #fff;
         &:hover {
-          border-bottom: 3px solid #524763;
+          border-bottom: 3px solid #FF5252;
         }
       }
     }
@@ -67,10 +67,10 @@ export default class Header extends Component {
                     <MainNav>
                         <ul>
                             <li>
-                                <Link to="/">Home</Link>
+                                <Link to="/">Accueil</Link>
                             </li>
                             <li>
-                                <Link to="/about">About</Link>
+                                <Link to="/about">À propos</Link>
                             </li>
                         </ul>
                     </MainNav>

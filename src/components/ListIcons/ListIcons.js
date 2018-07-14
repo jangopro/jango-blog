@@ -17,6 +17,11 @@ const DivIcons = styled.div`
         margin-right: 10px;
         color: #000;
     }
+    a:hover{
+        svg{
+            color: #FF5252;
+        }
+    }
 `;
 
 export default class ListIcons extends Component {
@@ -26,7 +31,7 @@ export default class ListIcons extends Component {
                 <a href="https://github.com/jangopro" rel="noopener noreferrer" target="_blank">
                     <FaGithub />
                 </a>
-                <a href="https://twitter.com/mick_ohyeah" rel="noopener noreferrer" target="_blank">
+                <a href="https://twitter.com/micprovencher" rel="noopener noreferrer" target="_blank">
                     <FaTwitter />
                 </a>
                 <a href="" rel="noopener noreferrer" target="_blank">
