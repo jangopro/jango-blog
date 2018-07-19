@@ -12,7 +12,9 @@ const ProjectListing = ({ project }) => (
         </div>
         <div>
             <h3>{project.frontmatter.title}</h3>
-            <ProjectHomeSection.Excerpt>{project.excerpt}</ProjectHomeSection.Excerpt>
+            <ProjectHomeSection.Excerpt dangerouslySetInnerHTML={{
+                __html: project.html
+            }}></ProjectHomeSection.Excerpt>
         </div>
     </ProjectHomeSection>
 );
