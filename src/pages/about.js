@@ -31,7 +31,7 @@ export default class About extends Component {
                     </div>
                     <div>
                         <p>
-                            Je suis un développeur Web de Québec, présentement en emploi chez Myca en tant que développeur front-end. 
+                            Je suis un développeur Web de Québec, présentement en emploi chez Myca en tant que développeur front-end. J&apos;ai fait mes etudes au C&eacute;gep de Sainte-Foy en integration multimedia.
                             Je développe principaelement en JavaScript, quoiqu&apos;en début de carrière, j&apos;étais plus du côté back-end em utilisant PHP et des CMS (Wordpress, Drupal)
                         </p>
                         <p>
