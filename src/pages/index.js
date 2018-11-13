@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
 import PostListing from '../components/Posts/PostListing';
 import ProjectListing from '../components/Projects/ProjectListing';
 import HomeSection from '../blocks/HomeSections';
+import Layout from '../components/layout';
 
 const gridArticles = {
     display: 'inline-grid',
@@ -18,7 +20,7 @@ const gridProjects = {
 };
 
 const IndexPage = ({ data }) => (
-    <div>
+    <Layout>
         <HomeSection bgColor='white'>
             <HomeSection.Title>Latest articles</HomeSection.Title>
             <div style={gridArticles}>
@@ -35,7 +37,7 @@ const IndexPage = ({ data }) => (
                 ))}
             </div>
         </HomeSection>
-    </div>
+    </Layout>
     
 );
 

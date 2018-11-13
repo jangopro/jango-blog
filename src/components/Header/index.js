@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Link from 'gatsby-link';
+import {Link} from 'gatsby';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+
 import PropTypes from 'prop-types';
 
 const HeaderWrapper = styled.div`
@@ -49,7 +49,7 @@ const MainNav = styled.nav`
 
 export default class Header extends Component {
     render() {
-        const { data } = this.props;
+
         return (
             <HeaderWrapper ref={wrapper => (this.wrapper = wrapper)}>
                 <HeaderContainer>
@@ -75,17 +75,7 @@ export default class Header extends Component {
                         </ul>
                     </MainNav>
                 </HeaderContainer>
-                <Img
-                    style={{
-                        position: 'absolute',
-                        left: 0,
-                        top: 0,
-                        width: '100%',
-                        height: '100%',
-                        opacity: 0.3
-                    }}
-                    sizes={data.background.sizes}
-                />
+                
             </HeaderWrapper>
         );
     }

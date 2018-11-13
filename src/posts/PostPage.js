@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 
 const Post = styled.article`
     text-align: center;
@@ -20,15 +22,17 @@ export default class PostPage extends Component {
     render() {
         const { data } = this.props;
         return (
-            <Post>
-                <h2>{data.markdownRemark.frontmatter.title}</h2>
-                <h3>{data.markdownRemark.frontmatter.date} | {data.markdownRemark.timeToRead} min read</h3>
-                <PostText
-                    dangerouslySetInnerHTML={{
-                        __html: data.markdownRemark.html
-                    }}
-                />
-            </Post>
+            <Layout>
+                <Post>
+                    <h2>{data.markdownRemark.frontmatter.title}</h2>
+                    <h3>{data.markdownRemark.frontmatter.date} | {data.markdownRemark.timeToRead} min read</h3>
+                    <PostText
+                        dangerouslySetInnerHTML={{
+                            __html: data.markdownRemark.html
+                        }}
+                    />
+                </Post>
+            </Layout>
         );
     }
 }
