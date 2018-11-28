@@ -1,43 +1,30 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "commonjs": true
+    env: {
+        browser: true,
+        es6: true,
+        commonjs: true,
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
+    extends: ['eslint:recommended', 'plugin:react/recommended'],
+    parserOptions: {
+        ecmaVersion: 2018,
+        ecmaFeatures: {
+            jsx: true,
         },
-        "sourceType": "module"
+        sourceType: 'module',
     },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
+    plugins: ['react'],
+    settings: {
+        react: {
+            version: '16.0', // React version, default to the latest React stable release
+        },
     },
-    "globals": {
-        "graphql": false,
-        "__dirname": false
-    }
+    rules: {
+        indent: ['error', 4],
+        quotes: ['error', 'single'],
+        semi: ['error', 'always'],
+    },
+    globals: {
+        graphql: false,
+        __dirname: false,
+    },
 };

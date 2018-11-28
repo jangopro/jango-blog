@@ -6,6 +6,9 @@ const Link = styled.a`
     &:hover {
         text-decoration: underline;
     }
+    &:visited {
+        color: #fff;
+    }
 `;
 
 export default Link;
