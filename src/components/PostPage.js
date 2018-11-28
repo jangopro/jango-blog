@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from './Layout';
 
 const Post = styled.article`
     text-align: center;
     margin: 0 auto;
     max-width: 900px;
     padding: 30px 0px;
-    span{
+    span {
         padding-bottom: 20px;
     }
 `;
@@ -25,10 +25,9 @@ export default class PostPage extends Component {
             <Layout>
                 <Post>
                     <h2>{data.markdownRemark.frontmatter.title}</h2>
-                    <h3>{data.markdownRemark.frontmatter.date} | {data.markdownRemark.timeToRead} min read</h3>
                     <PostText
                         dangerouslySetInnerHTML={{
-                            __html: data.markdownRemark.html
+                            __html: data.markdownRemark.html,
                         }}
                     />
                 </Post>
@@ -38,18 +37,18 @@ export default class PostPage extends Component {
 }
 
 PostPage.propTypes = {
-    data: PropTypes.object
+    data: PropTypes.object,
 };
 
 export const query = graphql`
-  query BlogPostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      timeToRead
-      frontmatter {
-        title
-        date(formatString: "MMMM DD YYYY")
-      }
+    query BlogPostQuery($slug: String!) {
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            html
+            timeToRead
+            frontmatter {
+                title
+                date(formatString: "MMMM DD YYYY")
+            }
+        }
     }
-  }
 `;

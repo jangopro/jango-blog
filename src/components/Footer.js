@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import ListIcons from '../ListIcons/ListIcons';
+import ListIcons from './ListIcons';
 
 const FooterContainer = styled.footer`
     text-align: center;
@@ -12,7 +12,7 @@ export default class Footer extends Component {
     render() {
         return (
             <FooterContainer>
-                <ListIcons></ListIcons>
+                <ListIcons />
                 <strong>©2018 Michael Provencher</strong>
             </FooterContainer>
         );

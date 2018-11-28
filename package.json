@@ -1,8 +1,8 @@
 {
   "name": "mic-provencher-site",
-  "description": "Gatsby default starter",
+  "description": "Site web / Blogue de Michael Provencher",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Michael Provencher <michaelprovencher15@gmail.com>",
   "dependencies": {
     "gatsby": "^2.0.47",
     "gatsby-image": "^2.0.20",

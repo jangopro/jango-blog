@@ -5,12 +5,12 @@ import Helmet from 'react-helmet';
 import Header from './Header';
 import '../css/index.css';
 import '../css/font.css';
-import Footer from './Footer/Footer';
+import Footer from './Footer';
 import { StaticQuery, graphql } from 'gatsby';
 
 const TemplateWrapper = ({ children }) => (
     <StaticQuery
-        query ={graphql`
+        query={graphql`
             query LayoutQuery {
                 site {
                     siteMetadata {
@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children }) => (
                 }
                 background: imageSharp(id: { regex: "/header-1.jpg/" }) {
                     fluid(maxWidth: 1240) {
-                    ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid
                     }
                 }
             }
@@ -28,16 +28,16 @@ const TemplateWrapper = ({ children }) => (
         render={data => (
             <div>
                 <Helmet
-                    title="Mon blogue"
+                    title='Mon blogue'
                     meta={[
                         { name: 'description', content: 'Sample' },
-                        { name: 'keywords', content: 'sample, something' }
+                        { name: 'keywords', content: 'sample, something' },
                     ]}
                 />
                 <Header data={data} />
                 <main
                     style={{
-                        margin: '0 auto'
+                        margin: '0 auto',
                     }}
                 >
                     {children}
@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children }) => (
 
 TemplateWrapper.propTypes = {
     children: PropTypes.object,
-    data: PropTypes.object
+    data: PropTypes.object,
 };
 
 export default TemplateWrapper;
