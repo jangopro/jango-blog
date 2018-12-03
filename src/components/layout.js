@@ -28,10 +28,17 @@ const TemplateWrapper = ({ children }) => (
         render={data => (
             <div>
                 <Helmet
-                    title='Mon blogue'
+                    title='Michael Provencher - Site Web / Blogue'
                     meta={[
-                        { name: 'description', content: 'Sample' },
-                        { name: 'keywords', content: 'sample, something' },
+                        {
+                            name: 'description',
+                            content: 'Site Web perso de Michael Provencher',
+                        },
+                        {
+                            name: 'keywords',
+                            content:
+                                'michael, provencher, blogue, blog, web, dev',
+                        },
                     ]}
                 />
                 <Header data={data} />
