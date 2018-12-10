@@ -63,9 +63,9 @@ export default class About extends Component {
 
                             <p>
                                 Dans mes temps libres, j’aime bien jouer de la
-                                guitare/ basse, essayer de bien parler allemand.
-                                Je suis egalement un grand fan de cinéma, de
-                                musique et de lecture.
+                                guitare/ basse et essayer de bien parler
+                                allemand. Je suis également un grand fan de
+                                cinéma, de musique et de lecture.
                             </p>
                         </div>
                     </div>

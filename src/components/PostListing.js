@@ -1,12 +1,10 @@
 import React from 'react';
-import myPhoto from '../images/placeholder.jpg';
 
 import PropTypes from 'prop-types';
 import BlogPostHome from '../blocks/BlogPostHome';
 
 const PostListing = ({ post }) => (
     <BlogPostHome>
-        <img src={myPhoto} alt='' />
         <BlogPostHome.Title>
             <BlogPostHome.Link href={post.fields.slug}>
                 {post.frontmatter.title}

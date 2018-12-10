@@ -9,7 +9,7 @@ const ProjectListing = ({ project }) => (
                 src={`${
                     project.frontmatter.projectImage.childImageSharp.fluid.src
                 }`}
-                alt=''
+                alt={`${project.frontmatter.title}`}
             />
         </div>
         <div>
