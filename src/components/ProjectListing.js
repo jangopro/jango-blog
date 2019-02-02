@@ -14,11 +14,11 @@ const ProjectListing = ({ project }) => (
         </div>
         <div>
             <h3>{project.frontmatter.title}</h3>
-            <ProjectHomeSection.Excerpt
+            <div
                 dangerouslySetInnerHTML={{
                     __html: project.html,
                 }}
-            />
+            ></div>
             <ProjectHomeSection.Link as='a' target='_blank' href={project.frontmatter.link}>
                 Voir le projet &#8594;
             </ProjectHomeSection.Link>
