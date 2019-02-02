@@ -19,7 +19,7 @@ const ProjectListing = ({ project }) => (
                     __html: project.html,
                 }}
             />
-            <ProjectHomeSection.Link as='a' href={project.frontmatter.link}>
+            <ProjectHomeSection.Link as='a' target='_blank' href={project.frontmatter.link}>
                 Voir le projet &#8594;
             </ProjectHomeSection.Link>
         </div>
