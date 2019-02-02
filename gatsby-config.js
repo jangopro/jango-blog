@@ -4,10 +4,17 @@ module.exports = {
         desc: 'Site web / Blogue de Michael Provencher',
         siteUrl: 'https://micprovencher.com',
     },
+    
     plugins: [
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-styled-components',
         'gatsby-plugin-sitemap',
+        {
+            resolve: 'gatsby-plugin-google-analytics',
+            options: {
+                trackingId: 'UA-87071406-3',
+            },
+        },
         {
             resolve: 'gatsby-source-filesystem',
             options: {
