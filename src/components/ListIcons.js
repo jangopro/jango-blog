@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { FaGithub, FaTwitter, FaSpotify, FaLinkedin } from 'react-icons/lib/fa';
+import { FaGithub, FaTwitter, FaSpotify, FaLinkedin } from 'react-icons/fa';
 
 const DivIcons = styled.div`
     font-size: 20px;
