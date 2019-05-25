@@ -22,6 +22,7 @@ module.exports = {
         indent: ['error', 4],
         quotes: ['error', 'single'],
         semi: ['error', 'always'],
+        'no-console': 'off',
     },
     globals: {
         graphql: false,

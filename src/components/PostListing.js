@@ -10,6 +10,7 @@ const PostListing = ({ post }) => (
                 {post.frontmatter.title}
             </BlogPostHome.Link>
         </BlogPostHome.Title>
+        <img src={`${post.frontmatter.image.childImageSharp.fluid.src}`} />
         <BlogPostHome.Excerpt>{post.excerpt}</BlogPostHome.Excerpt>
     </BlogPostHome>
 );

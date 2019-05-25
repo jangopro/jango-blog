@@ -1,7 +1,7 @@
 ---
 title: 'Raccourcis clavier et trucs pratiques de VS Code'
 date: '2018-07-16'
-image: '../images/placeholder.jpg'
+image: './post1.jpg'
 ---
 
 Dans ce court article, je vais vous montrer quelques raccourcis clavier and trucs de VS Code que j’utilise à chaque fois que je code.

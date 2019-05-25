@@ -1,7 +1,7 @@
 ---
 title: 'Ma configuration de VS Code'
 date: '2018-11-13'
-image: '../images/placeholder.jpg'
+image: './post2.jpg'
 ---
 
 Avant j’étais un grand partisan de SublimeText mais ça l’a changé quand j’ai essayé VSCode (et c’est l’amour fou depuis)
